@@ -1,0 +1,678 @@
+{
+    "Basic Greetings": [
+        {
+            "tulu": "namaskAra",
+            "english": "Hello",
+            "pronunciation": "na-mas-kaa-ra"
+        },
+        {
+            "tulu": "encha ullar",
+            "english": "How are you?",
+            "pronunciation": "en-cha ul-lar"
+        },
+        {
+            "tulu": "yaan usar ulle",
+            "english": "I am fine",
+            "pronunciation": "yaan u-saar ul-le"
+        },
+        {
+            "tulu": "solmelu",
+            "english": "Thank you",
+            "pronunciation": "sol-me-lu"
+        },
+        {
+            "tulu": "barpae",
+            "english": "Goodbye",
+            "pronunciation": "bar-pe"
+        },
+        {
+            "tulu": "mast dinAND tUdu",
+            "english": "Long time no see",
+            "pronunciation": "mast di-nand too-du"
+        },
+        {
+            "tulu": "irena pudar enchina",
+            "english": "What is your name?",
+            "pronunciation": "i-re-na pu-dar en-chi-na"
+        },
+        {
+            "tulu": "enna pudar",
+            "english": "My name is",
+            "pronunciation": "en-na pu-dar"
+        },
+        {
+            "tulu": "kuDora tikk'ga",
+            "english": "See you again",
+            "pronunciation": "ku-do-ra tik-ga"
+        },
+        {
+            "tulu": "yenk gothundu",
+            "english": "I know",
+            "pronunciation": "yenk goth-un-du"
+        }
+    ],
+    "Family & People": [
+        {
+            "tulu": "ajje",
+            "english": "Grandmother",
+            "pronunciation": "aj-je"
+        },
+        {
+            "tulu": "yaan",
+            "english": "I",
+            "pronunciation": "yaan"
+        },
+        {
+            "tulu": "eer",
+            "english": "You (respectful)",
+            "pronunciation": "ee-r"
+        },
+        {
+            "tulu": "ee",
+            "english": "You (informal)",
+            "pronunciation": "ee"
+        },
+        {
+            "tulu": "aaye",
+            "english": "He",
+            "pronunciation": "aa-ye"
+        },
+        {
+            "tulu": "aal",
+            "english": "She",
+            "pronunciation": "aal"
+        },
+        {
+            "tulu": "aar",
+            "english": "He/She (to elders)",
+            "pronunciation": "aar"
+        },
+        {
+            "tulu": "nama",
+            "english": "We (inclusive)",
+            "pronunciation": "na-ma"
+        },
+        {
+            "tulu": "yenku\u1e37u",
+            "english": "We (exclusive)",
+            "pronunciation": "yen-ku-lu"
+        },
+        {
+            "tulu": "akl",
+            "english": "They",
+            "pronunciation": "ak-l"
+        }
+    ],
+    "Numbers & Counting": [
+        {
+            "tulu": "onji",
+            "english": "One",
+            "pronunciation": "on-ji"
+        },
+        {
+            "tulu": "raDD",
+            "english": "Two",
+            "pronunciation": "radd"
+        },
+        {
+            "tulu": "mooji",
+            "english": "Three",
+            "pronunciation": "moo-ji"
+        },
+        {
+            "tulu": "naal",
+            "english": "Four",
+            "pronunciation": "naal"
+        },
+        {
+            "tulu": "ain",
+            "english": "Five",
+            "pronunciation": "a-in"
+        },
+        {
+            "tulu": "aaji",
+            "english": "Six",
+            "pronunciation": "aa-ji"
+        },
+        {
+            "tulu": "El",
+            "english": "Seven",
+            "pronunciation": "el"
+        },
+        {
+            "tulu": "enma",
+            "english": "Eight",
+            "pronunciation": "en-ma"
+        },
+        {
+            "tulu": "ormba",
+            "english": "Nine",
+            "pronunciation": "orm-ba"
+        },
+        {
+            "tulu": "patt",
+            "english": "Ten",
+            "pronunciation": "patt"
+        }
+    ],
+    "Colors": [
+        {
+            "tulu": "kappu",
+            "english": "Black",
+            "pronunciation": "kap-pu"
+        },
+        {
+            "tulu": "boldu",
+            "english": "White",
+            "pronunciation": "bol-du"
+        },
+        {
+            "tulu": "kempu",
+            "english": "Red",
+            "pronunciation": "kem-pu"
+        },
+        {
+            "tulu": "neeli",
+            "english": "Blue",
+            "pronunciation": "nee-li"
+        },
+        {
+            "tulu": "pachhe",
+            "english": "Green",
+            "pronunciation": "pach-he"
+        },
+        {
+            "tulu": "nerale",
+            "english": "Purple",
+            "pronunciation": "ne-ra-le"
+        },
+        {
+            "tulu": "kandu",
+            "english": "Brown",
+            "pronunciation": "kan-du"
+        },
+        {
+            "tulu": "gulabi",
+            "english": "Pink",
+            "pronunciation": "gu-la-bi"
+        },
+        {
+            "tulu": "manjal",
+            "english": "Yellow",
+            "pronunciation": "man-jal"
+        },
+        {
+            "tulu": "kittale",
+            "english": "Orange",
+            "pronunciation": "kit-ta-le"
+        }
+    ],
+    "Fruits": [
+        {
+            "tulu": "bare parndh",
+            "english": "Banana",
+            "pronunciation": "ba-re parndh"
+        },
+        {
+            "tulu": "kukku",
+            "english": "Mango",
+            "pronunciation": "kuk-ku"
+        },
+        {
+            "tulu": "parangi pelakaayi",
+            "english": "Pineapple",
+            "pronunciation": "pa-ran-gi pe-la-kaa-yi"
+        },
+        {
+            "tulu": "daalimbe",
+            "english": "Pomegranate",
+            "pronunciation": "daa-lim-be"
+        },
+        {
+            "tulu": "dhrakshe",
+            "english": "Grapes",
+            "pronunciation": "dhrak-she"
+        },
+        {
+            "tulu": "pela kai",
+            "english": "Jackfruit",
+            "pronunciation": "pe-la kai"
+        },
+        {
+            "tulu": "peraye",
+            "english": "Guava",
+            "pronunciation": "pe-ra-ye"
+        },
+        {
+            "tulu": "bacchangaayi",
+            "english": "Watermelon",
+            "pronunciation": "bach-chan-gaa-yi"
+        },
+        {
+            "tulu": "chikku",
+            "english": "Chikoo",
+            "pronunciation": "chik-ku"
+        },
+        {
+            "tulu": "kark parnd",
+            "english": "Apple",
+            "pronunciation": "kark parnd"
+        }
+    ],
+    "Vegetables": [
+        {
+            "tulu": "gulla",
+            "english": "Brinjal",
+            "pronunciation": "gul-la"
+        },
+        {
+            "tulu": "batate",
+            "english": "Potato",
+            "pronunciation": "ba-ta-te"
+        },
+        {
+            "tulu": "tometo",
+            "english": "Tomato",
+            "pronunciation": "to-me-to"
+        },
+        {
+            "tulu": "mulengi",
+            "english": "Radish",
+            "pronunciation": "mu-len-gi"
+        },
+        {
+            "tulu": "neerulli",
+            "english": "Onion",
+            "pronunciation": "nee-rul-li"
+        },
+        {
+            "tulu": "belluli",
+            "english": "Garlic",
+            "pronunciation": "bel-lu-li"
+        },
+        {
+            "tulu": "batani",
+            "english": "Green Peas",
+            "pronunciation": "ba-ta-ni"
+        },
+        {
+            "tulu": "kanchala",
+            "english": "Bitter Gourd",
+            "pronunciation": "kan-cha-la"
+        },
+        {
+            "tulu": "karkambuda",
+            "english": "Ash Gourd",
+            "pronunciation": "kar-kam-bu-da"
+        },
+        {
+            "tulu": "kumbuda",
+            "english": "Pumpkin",
+            "pronunciation": "kum-bu-da"
+        }
+    ],
+    "Animals": [
+        {
+            "tulu": "naayi",
+            "english": "Dog",
+            "pronunciation": "naa-yi"
+        },
+        {
+            "tulu": "putche",
+            "english": "Cat",
+            "pronunciation": "put-che"
+        },
+        {
+            "tulu": "petta",
+            "english": "Cow",
+            "pronunciation": "pet-ta"
+        },
+        {
+            "tulu": "kuri",
+            "english": "Sheep",
+            "pronunciation": "ku-ri"
+        },
+        {
+            "tulu": "panji",
+            "english": "Pig",
+            "pronunciation": "pan-ji"
+        },
+        {
+            "tulu": "kudre",
+            "english": "Horse",
+            "pronunciation": "kud-re"
+        },
+        {
+            "tulu": "ane",
+            "english": "Elephant",
+            "pronunciation": "a-ne"
+        },
+        {
+            "tulu": "mange",
+            "english": "Monkey",
+            "pronunciation": "man-ge"
+        },
+        {
+            "tulu": "jinke",
+            "english": "Deer",
+            "pronunciation": "jin-ke"
+        },
+        {
+            "tulu": "pili",
+            "english": "Tiger",
+            "pronunciation": "pi-li"
+        }
+    ],
+    "Body Parts": [
+        {
+            "tulu": "tarae",
+            "english": "Head",
+            "pronunciation": "ta-rae"
+        },
+        {
+            "tulu": "kUjal",
+            "english": "Hair",
+            "pronunciation": "koo-jal"
+        },
+        {
+            "tulu": "kaNN",
+            "english": "Eye",
+            "pronunciation": "kann"
+        },
+        {
+            "tulu": "kebi",
+            "english": "Ear",
+            "pronunciation": "ke-bi"
+        },
+        {
+            "tulu": "mUnku",
+            "english": "Nose",
+            "pronunciation": "moon-ku"
+        },
+        {
+            "tulu": "bAyi",
+            "english": "Mouth",
+            "pronunciation": "baa-yi"
+        },
+        {
+            "tulu": "kai",
+            "english": "Hand",
+            "pronunciation": "kai"
+        },
+        {
+            "tulu": "kAr",
+            "english": "Leg",
+            "pronunciation": "kaar"
+        },
+        {
+            "tulu": "morampu",
+            "english": "Knee",
+            "pronunciation": "mo-ram-pu"
+        },
+        {
+            "tulu": "tigalae",
+            "english": "Chest",
+            "pronunciation": "ti-ga-lae"
+        }
+    ],
+    "Daily Activities": [
+        {
+            "tulu": "malpuni",
+            "english": "Work",
+            "pronunciation": "mal-pu-ni"
+        },
+        {
+            "tulu": "jeppuni",
+            "english": "Sleep",
+            "pronunciation": "jep-pu-ni"
+        },
+        {
+            "tulu": "tinnuni",
+            "english": "Eat",
+            "pronunciation": "tin-nu-ni"
+        },
+        {
+            "tulu": "parpini",
+            "english": "Drink",
+            "pronunciation": "par-pi-ni"
+        },
+        {
+            "tulu": "saippini",
+            "english": "Walk",
+            "pronunciation": "sai-pi-ni"
+        },
+        {
+            "tulu": "balipu",
+            "english": "Run",
+            "pronunciation": "ba-li-pu"
+        },
+        {
+            "tulu": "pola",
+            "english": "Go",
+            "pronunciation": "po-la"
+        },
+        {
+            "tulu": "bala",
+            "english": "Come",
+            "pronunciation": "ba-la"
+        },
+        {
+            "tulu": "kullu",
+            "english": "Sit",
+            "pronunciation": "kul-lu"
+        },
+        {
+            "tulu": "paater",
+            "english": "Talk",
+            "pronunciation": "paa-ter"
+        }
+    ],
+    "Time Expressions": [
+        {
+            "tulu": "portu",
+            "english": "Time",
+            "pronunciation": "por-tu"
+        },
+        {
+            "tulu": "tingolu",
+            "english": "Month",
+            "pronunciation": "tin-go-lu"
+        },
+        {
+            "tulu": "varsha",
+            "english": "Year",
+            "pronunciation": "var-sha"
+        },
+        {
+            "tulu": "ainji",
+            "english": "Now",
+            "pronunciation": "ain-ji"
+        },
+        {
+            "tulu": "mUvoDu",
+            "english": "Tomorrow",
+            "pronunciation": "moo-vo-du"
+        },
+        {
+            "tulu": "k\u0101lt\u00e6",
+            "english": "Morning",
+            "pronunciation": "kaal-tae"
+        },
+        {
+            "tulu": "gaNTae EtAND",
+            "english": "What is the time now?",
+            "pronunciation": "gan-tae et-and"
+        },
+        {
+            "tulu": "mast samayAND",
+            "english": "Long time",
+            "pronunciation": "mast sa-ma-yand"
+        },
+        {
+            "tulu": "mast dinaAND",
+            "english": "Many days",
+            "pronunciation": "mast di-na-and"
+        },
+        {
+            "tulu": "Epa",
+            "english": "When",
+            "pronunciation": "e-pa"
+        }
+    ],
+    "Food & Drinks": [
+        {
+            "tulu": "vaNas",
+            "english": "Lunch/Dinner",
+            "pronunciation": "va-nas"
+        },
+        {
+            "tulu": "neer",
+            "english": "Water",
+            "pronunciation": "neer"
+        },
+        {
+            "tulu": "chaaya",
+            "english": "Tea",
+            "pronunciation": "chaa-ya"
+        },
+        {
+            "tulu": "nAshTa",
+            "english": "Breakfast",
+            "pronunciation": "naash-ta"
+        },
+        {
+            "tulu": "Kojappu",
+            "english": "Yogurt",
+            "pronunciation": "ko-jap-pu"
+        },
+        {
+            "tulu": "kori",
+            "english": "Chicken",
+            "pronunciation": "ko-ri"
+        },
+        {
+            "tulu": "meen",
+            "english": "Fish",
+            "pronunciation": "meen"
+        },
+        {
+            "tulu": "ari",
+            "english": "Rice (Raw)",
+            "pronunciation": "a-ri"
+        },
+        {
+            "tulu": "bella",
+            "english": "Jaggery",
+            "pronunciation": "bel-la"
+        },
+        {
+            "tulu": "thaarayi",
+            "english": "Coconut",
+            "pronunciation": "thaa-ra-yi"
+        }
+    ],
+    "Places": [
+        {
+            "tulu": "ill",
+            "english": "Home",
+            "pronunciation": "ill"
+        },
+        {
+            "tulu": "oor",
+            "english": "Place",
+            "pronunciation": "oor"
+        },
+        {
+            "tulu": "kudla",
+            "english": "Mangalore",
+            "pronunciation": "kud-la"
+        },
+        {
+            "tulu": "neerullida paDpa",
+            "english": "Near the water",
+            "pronunciation": "nee-rul-li-da pad-pa"
+        },
+        {
+            "tulu": "kotya",
+            "english": "Bathroom",
+            "pronunciation": "kot-ya"
+        },
+        {
+            "tulu": "kuDlaD",
+            "english": "In Mangalore",
+            "pronunciation": "kud-lad"
+        },
+        {
+            "tulu": "enna ill",
+            "english": "My home",
+            "pronunciation": "en-na ill"
+        },
+        {
+            "tulu": "ulai",
+            "english": "Inside",
+            "pronunciation": "u-lai"
+        },
+        {
+            "tulu": "pira",
+            "english": "Outside",
+            "pronunciation": "pi-ra"
+        },
+        {
+            "tulu": "olu",
+            "english": "Where",
+            "pronunciation": "o-lu"
+        }
+    ],
+    "Cultural Terms": [
+        {
+            "tulu": "bhuta kola",
+            "english": "Spirit worship",
+            "pronunciation": "bhoo-ta ko-la"
+        },
+        {
+            "tulu": "yakshagana",
+            "english": "Folk theater",
+            "pronunciation": "yak-sha-ga-na"
+        },
+        {
+            "tulu": "tulunadu",
+            "english": "Tulu region",
+            "pronunciation": "tu-lu-na-du"
+        },
+        {
+            "tulu": "paddana",
+            "english": "Oral epic",
+            "pronunciation": "pad-da-na"
+        },
+        {
+            "tulu": "bootha",
+            "english": "Spirit deity",
+            "pronunciation": "boo-tha"
+        },
+        {
+            "tulu": "tigalari",
+            "english": "Traditional script",
+            "pronunciation": "ti-ga-la-ri"
+        },
+        {
+            "tulu": "buDa katta",
+            "english": "Ancestry/heritage",
+            "pronunciation": "bu-da kat-ta"
+        },
+        {
+            "tulu": "krI",
+            "english": "Game",
+            "pronunciation": "kree"
+        },
+        {
+            "tulu": "bale tulu kalpuga",
+            "english": "Let's learn Tulu",
+            "pronunciation": "ba-le tu-lu kal-pu-ga"
+        },
+        {
+            "tulu": "pAtero",
+            "english": "Language",
+            "pronunciation": "paa-te-ro"
+        }
+    ]
+}

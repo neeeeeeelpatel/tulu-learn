@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Tulu - Language Learning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1>Learn Tulu</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav__btn active" data-section="home">Home</button>
+                    <button class="nav__btn" data-section="lessons">Lessons</button>
+                    <button class="nav__btn" data-section="practice">Practice</button>
+                    <button class="nav__btn" data-section="progress">Progress</button>
+                </nav>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat__icon">⚡</span>
+                        <span class="stat__value" id="xp-display">0</span>
+                        <span class="stat__label">XP</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__icon">🔥</span>
+                        <span class="stat__value" id="streak-display">0</span>
+                        <span class="stat__label">Streak</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__icon">🏆</span>
+                        <span class="stat__value" id="level-display">Beginner</span>
+                        <span class="stat__label">Level</span>
+                    </div>
+                    <div class="stat" data-stat="hearts">
+                        <span class="stat__icon">❤️</span>
+                        <span class="stat__value" id="hearts-display">5</span>
+                        <span class="stat__label">Hearts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="section section--active">
+            <div class="container">
+                <div class="welcome">
+                    <h2>Welcome to Learn Tulu!</h2>
+                    <p>Master the beautiful Tulu language through interactive lessons and engaging exercises.</p>
+                    <div class="daily-goal">
+                        <h3>Daily Goal</h3>
+                        <div class="goal-progress">
+                            <div class="progress-bar">
+                                <div class="progress-bar__fill" id="daily-progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="goal-text">0 / 50 XP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesson-overview">
+                    <h3>Continue Learning</h3>
+                    <div class="featured-lesson">
+                        <div class="card">
+                            <div class="card__body">
+                                <h4>Ready to continue?</h4>
+                                <p>Pick up where you left off and keep building your Tulu vocabulary!</p>
+                                <button class="btn btn--primary" id="continue-learning">Start Lesson</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Section -->
+        <section id="lessons" class="section">
+            <div class="container">
+                <div class="lesson-list">
+                    <h2>Choose a Lesson</h2>
+                    <div class="lesson-cards" id="lesson-cards">
+                        <!-- Lesson cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section id="practice" class="section">
+            <div class="container">
+                <h2>Practice Mode</h2>
+                <div class="practice-options">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Review Mistakes</h3>
+                            <p>Practice words you got wrong in previous lessons</p>
+                            <button class="btn btn--primary btn--full-width" id="practice-mistakes">Start Practice</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Random Practice</h3>
+                            <p>Practice random words from all learned categories</p>
+                            <button class="btn btn--outline btn--full-width" id="practice-random">Start Practice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Interface -->
+        <section id="lesson-interface" class="section">
+            <div class="container">
+                <div class="lesson-header">
+                    <button class="btn btn--outline" id="exit-lesson">✕ Exit</button>
+                    <div class="lesson-progress">
+                        <div class="progress-bar">
+                            <div class="progress-bar__fill" id="lesson-progress-fill"></div>
+                        </div>
+                        <span class="question-counter" id="question-counter">1 of 10</span>
+                    </div>
+                    <div class="lesson-info">
+                        <span id="lesson-title">Basic Greetings</span>
+                    </div>
+                </div>
+                
+                <div class="question-container">
+                    <div class="question">
+                        <h3 id="question-text">Translate this word:</h3>
+                        <div class="question-content">
+                            <div class="word-display" id="word-display">namaskAra</div>
+                            <div class="pronunciation" id="pronunciation">(na-mas-kaa-ra)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="answer-section">
+                        <div class="answer-options" id="answer-options">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                        <div class="answer-input" id="answer-input" style="display: none;">
+                            <input type="text" class="form-control" id="text-input" placeholder="Type your answer...">
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-actions">
+                        <button class="btn btn--primary btn--full-width" id="check-answer">Check Answer</button>
+                        <button class="btn btn--primary btn--full-width" id="next-question" style="display: none;">Next</button>
+                        <button class="btn btn--primary btn--full-width" id="continue-lesson" style="display: none;">Continue</button>
+                    </div>
+                    
+                    <div class="feedback" id="feedback" style="display: none;">
+                        <div class="feedback__content">
+                            <div class="feedback__icon"></div>
+                            <div class="feedback__text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wrong Answers Review -->
+        <section id="review-mistakes" class="section">
+            <div class="container">
+                <div class="review-header">
+                    <h2>Review Your Mistakes</h2>
+                    <p>Let's practice the words you got wrong</p>
+                </div>
+                <div class="review-content" id="review-content">
+                    <!-- Review questions will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Complete -->
+        <section id="lesson-complete" class="section">
+            <div class="container">
+                <div class="completion-celebration">
+                    <div class="celebration-icon">🎉</div>
+                    <h2>Lesson Complete!</h2>
+                    <div class="completion-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">⚡</span>
+                            <span class="stat-label">XP Earned</span>
+                            <span class="stat-value" id="xp-earned">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-label">Accuracy</span>
+                            <span class="stat-value" id="accuracy">100%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-label">Words Learned</span>
+                            <span class="stat-value" id="words-learned-session">0</span>
+                        </div>
+                    </div>
+                    <div class="completion-actions">
+                        <button class="btn btn--primary btn--lg" id="continue-to-lessons">Continue Learning</button>
+                        <button class="btn btn--outline btn--lg" id="review-lesson" style="display: none;">Review Mistakes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="section">
+            <div class="container">
+                <h2>Your Progress</h2>
+                <div class="progress-overview">
+                    <div class="progress-stats">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Overall Stats</h3>
+                                <div class="stat-grid">
+                                    <div class="stat-item">
+                                        <span class="stat-number" id="total-xp">0</span>
+                                        <span class="stat-label">Total XP</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number" id="words-learned">0</span>
+                                        <span class="stat-label">Words Learned</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number" id="lessons-completed">0</span>
+                                        <span class="stat-label">Lessons Completed</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number" id="current-streak">0</span>
+                                        <span class="stat-label">Day Streak</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-preview">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Recent Achievements</h3>
+                                <div id="recent-achievements">
+                                    <p class="text-secondary">Complete your first lesson to earn achievements!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
