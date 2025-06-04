@@ -192,8 +192,6 @@ const AppState = {
         xp: 0,
         streak: 0,
         level: 'Beginner',
-        hearts: 5,
-        maxHearts: 5,
         lessonsCompleted: [],
         wordsLearned: 0,
         totalWordsLearned: 0,
@@ -610,14 +608,8 @@ function checkAnswer() {
         AppState.userProgress.dailyXP += 10;
         AppState.userProgress.wordsLearned++;
     } else {
-        AppState.userProgress.hearts = Math.max(0, AppState.userProgress.hearts - 1);
         AppState.wrongAnswers.push(question);
         AppState.sessionStats.wrongQuestionIds.push(question.id);
-        
-        // Start heart regeneration when a heart is lost
-        if (AppState.userProgress.hearts < AppState.userProgress.maxHearts) {
-            startHeartRegeneration();
-        }
         
         // Add to incorrect words for future practice
         if (!AppState.userProgress.incorrectWords.find(w => w.tulu === question.wordData.tulu)) {
@@ -641,14 +633,6 @@ function checkAnswer() {
 
     // Save progress
     saveUserProgress();
-
-    // Check if hearts are depleted
-    if (AppState.userProgress.hearts <= 0) {
-        setTimeout(() => {
-            alert('You\'ve run out of hearts! Take a break and try again later.');
-            showSection('home');
-        }, 2000);
-    }
 }
 
 function updateAnswerAppearance(isCorrect, correctAnswer) {
@@ -669,11 +653,6 @@ function nextQuestion() {
 
 function finishLesson() {
     const accuracy = (AppState.sessionStats.correctAnswers / AppState.sessionStats.totalQuestions) * 100;
-    
-    // Earn a heart if accuracy is above 80%
-    if (accuracy >= 80) {
-        earnHeart();
-    }
     
     calculateLessonResults();
     showCompletionScreen();
@@ -824,12 +803,10 @@ function updateHeaderStats() {
     const xpDisplay = document.getElementById('xp-display');
     const streakDisplay = document.getElementById('streak-display');
     const levelDisplay = document.getElementById('level-display');
-    const heartsDisplay = document.getElementById('hearts-display');
 
     if (xpDisplay) xpDisplay.textContent = AppState.userProgress.xp;
     if (streakDisplay) streakDisplay.textContent = AppState.userProgress.streak;
     if (levelDisplay) levelDisplay.textContent = AppState.userProgress.level;
-    if (heartsDisplay) heartsDisplay.textContent = AppState.userProgress.hearts;
 }
 
 function updateDailyProgress() {
@@ -856,8 +833,6 @@ function updateUserLevel() {
     
     if (newLevel !== AppState.userProgress.level) {
         AppState.userProgress.level = newLevel;
-        // Earn a heart when leveling up
-        earnHeart();
     }
 }
 
@@ -926,19 +901,11 @@ function saveUserProgress() {
 
 function loadUserProgress() {
     try {
-        // In a real application, this would load from localStorage
-        // const saved = localStorage.getItem('tuluLearningProgress');
-        // if (saved) {
-        //     AppState.userProgress = { ...AppState.userProgress, ...JSON.parse(saved) };
-        // }
-        
         // Initialize with default values for sandbox environment
         AppState.userProgress = {
             xp: 0,
             streak: 0,
             level: 'Beginner',
-            hearts: 5,
-            maxHearts: 5,
             lessonsCompleted: [],
             wordsLearned: 0,
             totalWordsLearned: 0,
@@ -947,11 +914,6 @@ function loadUserProgress() {
             lastStudyDate: null,
             incorrectWords: []
         };
-        
-        // Start heart regeneration if needed
-        if (AppState.userProgress.hearts < AppState.userProgress.maxHearts) {
-            startHeartRegeneration();
-        }
         
         console.log('Progress loaded with default values');
     } catch (error) {
@@ -961,8 +923,6 @@ function loadUserProgress() {
             xp: 0,
             streak: 0,
             level: 'Beginner',
-            hearts: 5,
-            maxHearts: 5,
             lessonsCompleted: [],
             wordsLearned: 0,
             totalWordsLearned: 0,
@@ -971,106 +931,5 @@ function loadUserProgress() {
             lastStudyDate: null,
             incorrectWords: []
         };
-    }
-}
-
-// Add these new functions after the AppState definition
-function startHeartRegeneration() {
-    // Only start regeneration if hearts are below max
-    if (AppState.userProgress.hearts < AppState.userProgress.maxHearts) {
-        // Clear any existing timer
-        if (AppState.heartRegenerationTimer) {
-            clearTimeout(AppState.heartRegenerationTimer);
-        }
-        
-        // Initialize countdown
-        let timeLeft = 60; // 60 seconds
-        updateHeartCountdown(timeLeft);
-        
-        // Update countdown every second
-        AppState.heartCountdownInterval = setInterval(() => {
-            timeLeft--;
-            updateHeartCountdown(timeLeft);
-        }, 1000);
-        
-        // Set new timer for 1 minute
-        AppState.heartRegenerationTimer = setTimeout(() => {
-            clearInterval(AppState.heartCountdownInterval);
-            playHeartRegenerationSound();
-            earnHeart();
-            // Continue regeneration if still below max
-            if (AppState.userProgress.hearts < AppState.userProgress.maxHearts) {
-                startHeartRegeneration();
-            }
-        }, 60000); // 60000 ms = 1 minute
-    }
-}
-
-function updateHeartCountdown(seconds) {
-    const heartsStat = document.querySelector('.stat[data-stat="hearts"]');
-    if (heartsStat) {
-        const countdownElement = heartsStat.querySelector('.heart-countdown');
-        if (!countdownElement) {
-            // Create countdown element if it doesn't exist
-            const newCountdown = document.createElement('div');
-            newCountdown.className = 'heart-countdown';
-            heartsStat.appendChild(newCountdown);
-        }
-        
-        // Update countdown text
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        const countdownText = `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-        heartsStat.querySelector('.heart-countdown').textContent = countdownText;
-    }
-}
-
-function playHeartRegenerationSound() {
-    // Create audio element
-    const audio = new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU');
-    
-    // Set audio properties
-    audio.volume = 0.5;
-    
-    // Play the sound
-    audio.play().catch(error => {
-        console.log('Audio playback failed:', error);
-    });
-}
-
-function earnHeart() {
-    if (AppState.userProgress.hearts < AppState.userProgress.maxHearts) {
-        AppState.userProgress.hearts++;
-        updateUI();
-        showHeartEarnedAnimation();
-        
-        // Remove countdown when hearts are full
-        if (AppState.userProgress.hearts >= AppState.userProgress.maxHearts) {
-            const heartsStat = document.querySelector('.stat[data-stat="hearts"]');
-            if (heartsStat) {
-                const countdownElement = heartsStat.querySelector('.heart-countdown');
-                if (countdownElement) {
-                    countdownElement.remove();
-                }
-            }
-            if (AppState.heartCountdownInterval) {
-                clearInterval(AppState.heartCountdownInterval);
-            }
-        }
-        
-        // Start regeneration timer if still below max
-        if (AppState.userProgress.hearts < AppState.userProgress.maxHearts) {
-            startHeartRegeneration();
-        }
-    }
-}
-
-function showHeartEarnedAnimation() {
-    const heartsDisplay = document.getElementById('hearts-display');
-    if (heartsDisplay) {
-        heartsDisplay.classList.add('heart-earned');
-        setTimeout(() => {
-            heartsDisplay.classList.remove('heart-earned');
-        }, 1000);
     }
 }
