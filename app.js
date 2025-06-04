@@ -261,6 +261,7 @@ function initializeEventListeners() {
     const exitBtn = document.getElementById('exit-lesson');
     const continueToLessonsBtn = document.getElementById('continue-to-lessons');
     const reviewLessonBtn = document.getElementById('review-lesson');
+    const skipQuestionBtn = document.getElementById('skip-question');
 
     if (checkAnswerBtn) {
         checkAnswerBtn.addEventListener('click', checkAnswer);
@@ -283,6 +284,9 @@ function initializeEventListeners() {
     }
     if (reviewLessonBtn) {
         reviewLessonBtn.addEventListener('click', startReviewMode);
+    }
+    if (skipQuestionBtn) {
+        skipQuestionBtn.addEventListener('click', skipQuestion);
     }
 
     // Answer options event delegation
@@ -515,6 +519,7 @@ function displayQuestion() {
 
     // Reset buttons and feedback
     showButton('check-answer');
+    showButton('skip-question');
     hideButton('next-question');
     hideButton('continue-lesson');
     hideFeedback();
@@ -932,4 +937,36 @@ function loadUserProgress() {
             incorrectWords: []
         };
     }
+}
+
+function skipQuestion() {
+    if (AppState.isAnswerChecked) return;
+
+    const question = AppState.lessonQuestions[AppState.currentQuestionIndex];
+    
+    // Add to wrong answers for review
+    AppState.wrongAnswers.push(question);
+    AppState.sessionStats.wrongQuestionIds.push(question.id);
+    
+    // Add to incorrect words for future practice
+    if (!AppState.userProgress.incorrectWords.find(w => w.tulu === question.wordData.tulu)) {
+        AppState.userProgress.incorrectWords.push(question.wordData);
+    }
+
+    // Show feedback for skipped question
+    showFeedback(false, question.correctAnswer);
+    
+    // Update UI
+    AppState.isAnswerChecked = true;
+    hideButton('check-answer');
+    hideButton('skip-question');
+    
+    if (AppState.currentQuestionIndex < AppState.lessonQuestions.length - 1) {
+        showButton('next-question');
+    } else {
+        showButton('continue-lesson');
+    }
+
+    // Save progress
+    saveUserProgress();
 }
