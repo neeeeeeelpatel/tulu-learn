@@ -1,14 +1,5 @@
 # Learn Tulu - Interactive Language Learning App
 
-<div align="center">
-  <h3>🌟 Master the Beautiful Tulu Language Through Interactive Learning 🌟</h3>
-  <p>A comprehensive, Duolingo-inspired web application for learning Tulu language with gamified lessons, progress tracking, and cultural immersion.</p>
-</div>
-
----
-
-## 📖 Overview
-
 Learn Tulu is a modern, interactive language learning platform specifically designed to teach the Tulu language - a beautiful Dravidian language spoken primarily in coastal Karnataka and Kerala, India. The application combines engaging gamification elements with comprehensive vocabulary lessons to provide an immersive learning experience.
 
 ### 🎯 Key Highlights
@@ -226,7 +217,6 @@ This application follows proven language learning methodologies:
 ## 📈 Future Enhancements
 
 ### Planned Features
-- [ ] Audio pronunciation playback
 - [ ] Advanced grammar lessons
 - [ ] Conversation practice scenarios
 - [ ] Offline mode capability
@@ -263,30 +253,5 @@ We welcome contributions to improve Learn Tulu! Here's how you can help:
 
 ---
 
-## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
 
----
-
-## 🙏 Acknowledgments
-
-- **Tulu Language Community**: For preserving and sharing this beautiful language
-- **Language Learning Research**: Inspired by proven pedagogical methods
-- **Open Source Community**: For tools and libraries that made this possible
-- **Cultural Consultants**: For ensuring authentic representation of Tulu culture
-
----
-
-## 📞 Support & Contact
-
-- **Issues**: Report bugs or request features via GitHub Issues
-- **Questions**: Community discussions and Q&A
-- **Cultural Accuracy**: We welcome feedback from native Tulu speakers
-
----
-
-<div align="center">
-  <h3>🌟 Start Your Tulu Learning Journey Today! 🌟</h3>
-  <p><em>Namaskāra! Welcome to the wonderful world of Tulu language.</em></p>
-</div>
